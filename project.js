@@ -57,10 +57,9 @@ function addNewMovie(e) {
 }
 
 function deleteMovie(e) {
-    const deleteMovie = document.querySelector("#delete-movie");
-
-    if (e.target == deleteMovie) {
+    if (e.target.id === "delete-movie") {
         ui.deleteMovieToUI(e.target.parentElement.parentElement);
+        console.log(e.target.parentElement.parentElement)
         storage.deleteMovieToStorage(e.target.parentElement.previousElementSibling.previousElementSibling.innerText);
         ui.alertMessage("delete movie successfully..!", "danger");
 

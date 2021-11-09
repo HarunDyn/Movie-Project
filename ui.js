@@ -28,5 +28,6 @@ UI.prototype.alertMessage = (message, type) => {
 }
 
 UI.prototype.deleteMovieToUI = (tableRow) => {
+    console.log(tableRow)
     tableRow.remove();
 }
